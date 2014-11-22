@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['expressioncalc_2ec',['ExpressionCalc.c',['../_expression_calc_8c.html',1,'']]],
-  ['extra',['Extra',['../_expression_calc_8c.html#a79cd2ba7236d8017474e3340e169f888',1,'ExpressionCalc.c']]]
+  ['developing_2dcomputer_2dprogramming_2dprogram_2delements_2dstructure',['Developing-Computer-Programming-Program-Elements-Structure',['../md__developing_programming__developing_computer_programming__r_e_a_d_m_e.html',1,'']]]
 ];
