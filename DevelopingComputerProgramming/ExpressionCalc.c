@@ -7,7 +7,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#inlcude <math.h>
+/*
+*Included math.h library
+*Used functions sqrt() and pow()
+*/
+#include <math.h>
 
 //Function prototype 
 void Extra();
@@ -17,7 +21,12 @@ void Bitwise();
 int main()
 {
   //Welcome Screen
-  printf("Welcome to Calculator. \n");							
+  printf("Welcome to Calculator. \n");	
+  /*! 
+  * Flowchart diagram: 
+  * \image html FlowchartCalc.jpeg
+  */
+						
   char check='y';
   int r;
   int ch;
@@ -32,15 +41,18 @@ int main()
     while(check!='n')
     { 															
       printf("Please select an Arithmetic operation from the following: \n");			
-      printf("1)Addition \t 2)Subtraction \t 3)Multiplication \t 4)Division \t 5)Power \t 6)Extra Features \n ");
+      printf("1)Addition \t 2)Subtraction \t 3)Multiplication \n4)Division"
+      " \t 5)Power \t 6)Extra Features \n");
       
       //Input of operation, A SPACE before %d makes scanf ignore whitespace
       scanf(" %d", &ch);											
       
+      //Condition for Extra Features option
       if(ch!=6)
       {
         //Asking user if he wants to use saved previous result
-        printf("Do you want to use the previous result as one of the operands (Y/N)? \n");
+        printf("Do you want to use the previous result as "
+        "one of the operands (Y/N)? \n");
         scanf(" %c", &opt);													
       
         printf("Enter any values for operand(s): \n");
@@ -106,14 +118,21 @@ return(0);
 void Extra()												
 { 
   int ch,r;
-  printf("\nSelect from the following options: \n1)Fibonacci Series \n2)Bitwise Operations \n");
+  //Variable for square root option
+  float sq;
+  printf("\nSelect from the following options: \n1)Fibonacci Series"
+  " \n2)Bitwise Operations \n3)Square root \n");
   scanf(" %d",&ch);
   switch(ch)
   {
     case 1: printf("\nEnter the range of Fibonacci series: \n "); 
     		scanf(" %d",&r); CalcFib(r); break;
     		
-    case 2: Bitwise();		
+    case 2: Bitwise(); break;
+    //Case for square root
+    case 3:	printf("Enter the number you want the square root of: ");
+    		scanf(" %f",&sq);  printf("\n Square root of %f: ",sq); 
+    		sq=sqrt(sq); printf("%f",sq);  break;
   }
 }
  
@@ -169,9 +188,6 @@ void Bitwise()
 }
 
 
-/*! Flowchart diagram: 
-* \image html FlowchartCalc.png
-*/
 
 
 
