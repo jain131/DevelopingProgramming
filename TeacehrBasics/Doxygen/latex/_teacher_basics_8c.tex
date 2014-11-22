@@ -1,13 +1,14 @@
-\hypertarget{_teacher_basics_8c}{\section{/\+Users/nishantjain/\+Desktop/\+Repositories/\+Teacher\+Basic/\+Teacher\+Basics.c File Reference}
-\label{_teacher_basics_8c}\index{/\+Users/nishantjain/\+Desktop/\+Repositories/\+Teacher\+Basic/\+Teacher\+Basics.\+c@{/\+Users/nishantjain/\+Desktop/\+Repositories/\+Teacher\+Basic/\+Teacher\+Basics.\+c}}
+\hypertarget{_teacher_basics_8c}{\section{/\+Users/nishantjain/\+Desktop/\+Developing\+Programming/\+Teacehr\+Basics/\+Teacher\+Basics.c File Reference}
+\label{_teacher_basics_8c}\index{/\+Users/nishantjain/\+Desktop/\+Developing\+Programming/\+Teacehr\+Basics/\+Teacher\+Basics.\+c@{/\+Users/nishantjain/\+Desktop/\+Developing\+Programming/\+Teacehr\+Basics/\+Teacher\+Basics.\+c}}
 }
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$string.\+h$>$}\\*
-Include dependency graph for Teacher\+Basics.\+c\+:\nopagebreak
+Include dependency graph for Teacher\+Basics.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=236pt]{_teacher_basics_8c__incl}
+\includegraphics[width=248pt]{_teacher_basics_8c__incl}
 \end{center}
 \end{figure}
 \subsection*{Functions}
@@ -18,6 +19,11 @@ void \hyperlink{_teacher_basics_8c_ad0bea7ca09a6fd8663f0c0f7ac219c20}{Data\+Type
 void \hyperlink{_teacher_basics_8c_a6ef0cf8d139194a7cc30e0c64e09b14e}{Modifiers} ()
 \item 
 int \hyperlink{_teacher_basics_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{_teacher_basics_8c_af7dbda7167e22cb3417c16f78061ad80}{M\+A\+X} =2
 \end{DoxyCompactItemize}
 
 
@@ -31,8 +37,56 @@ int \hyperlink{_teacher_basics_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 )}}\label{_teacher_basics_8c_ad0bea7ca09a6fd8663f0c0f7ac219c20}
 
 
-Definition at line 42 of file Teacher\+Basics.\+c.
+Definition at line 45 of file Teacher\+Basics.\+c.
 
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+46 \{
+47   \textcolor{comment}{//local variable, array}
+48   \textcolor{keywordtype}{char} ch[10];                                                          
+49   printf(\textcolor{stringliteral}{"\(\backslash\)nThere are four basic data types: char-character, "}
+50   \textcolor{stringliteral}{"int-integer, float, and double. \(\backslash\)n"});
+51   \textcolor{keywordtype}{int} i;
+52   
+53   \textcolor{keywordflow}{do}                                                                    
+54   \{
+55     printf(\textcolor{stringliteral}{"Which data type do you want to learn about? \(\backslash\)n"});
+56     scanf(\textcolor{stringliteral}{" %s"}, ch);
+57     i=0;
+58     
+59     \textcolor{comment}{/*}
+60 \textcolor{comment}{    * Conditions for user's choice of subject. }
+61 \textcolor{comment}{    * Following can be interpreted as a database of req. info. on subject}
+62 \textcolor{comment}{    * Using <strcmp> to compare strings}
+63 \textcolor{comment}{    */}
+64     \textcolor{keywordflow}{if}(strcmp(ch,\textcolor{stringliteral}{"char"})==0) 
+65     printf(\textcolor{stringliteral}{"char is a data type used to store a single"}
+66     \textcolor{stringliteral}{" character such as a number, text or special characters."}
+67     \textcolor{stringliteral}{"\(\backslash\)nStorage size:1 byte \(\backslash\)nValue Range:-128 to 127 or 0 to 255 \(\backslash\)n"}); 
+68     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(ch,\textcolor{stringliteral}{"int"})==0) 
+69     printf(\textcolor{stringliteral}{"int is a data type used to store numerical data. \(\backslash\)n"}
+70     \textcolor{stringliteral}{" Storage size:2 bytes  \(\backslash\)nValue Range:-32,768 to 32,767  \(\backslash\)n"}); 
+71     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(ch,\textcolor{stringliteral}{"float"})==0) 
+72     printf(\textcolor{stringliteral}{"float is a data type used"}
+73     \textcolor{stringliteral}{" to store decimal numbers up to 6 decimal places. \(\backslash\)n Storage"}
+74     \textcolor{stringliteral}{" size:4 byte  \(\backslash\)nValue Range:1.2E-38 to 3.4E+38 \(\backslash\)n"}); 
+75     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(ch,\textcolor{stringliteral}{"double"})==0) 
+76     printf(\textcolor{stringliteral}{"double is a data type used"}
+77     \textcolor{stringliteral}{" to store decimal numbers to up to 15 decimal places . \(\backslash\)n Storage size:8 byte"}
+78     \textcolor{stringliteral}{"\(\backslash\)nValue Range:2.3E-308 to 1.7E+308 \(\backslash\)n"}); 
+79     \textcolor{keywordflow}{else} 
+80     \{ 
+81       \textcolor{comment}{//Repeating the input if an error}
+82       printf(\textcolor{stringliteral}{"Input either 'char', 'int', 'float' or 'double'. \(\backslash\)n"}); i=1;
+83     \}               
+84   \}\textcolor{keywordflow}{while}(i==1);
+85   
+86 \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:\nopagebreak
@@ -53,8 +107,45 @@ Here is the caller graph for this function\+:\nopagebreak
 )}}\label{_teacher_basics_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
 
 
-Definition at line 10 of file Teacher\+Basics.\+c.
+Definition at line 12 of file Teacher\+Basics.\+c.
 
+
+
+References Data\+Types(), and Modifiers().
+
+
+\begin{DoxyCode}
+13 \{
+14  \textcolor{keywordtype}{int} ch;
+15  \textcolor{keywordtype}{char} cont;
+16  
+17  \textcolor{keywordflow}{do}
+18  \{
+19    printf(\textcolor{stringliteral}{"Hello there! I am your teacher for the day. \(\backslash\)n"});
+20    printf(\textcolor{stringliteral}{"What do you want to learn? \(\backslash\)n 1)Data Types \(\backslash\)n 2)Modifiers"});
+21    \textcolor{comment}{//user's choice of study}
+22    scanf(\textcolor{stringliteral}{" %d"}, &ch);                                               
+23    \textcolor{keywordflow}{if}(ch==1)
+24    \{
+25      \hyperlink{_teacher_basics_8c_ad0bea7ca09a6fd8663f0c0f7ac219c20}{DataTypes}();
+26    \}
+27    
+28    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(ch==2)
+29    \{
+30     \hyperlink{_teacher_basics_8c_a6ef0cf8d139194a7cc30e0c64e09b14e}{Modifiers}();
+31    \}
+32  
+33    \textcolor{keywordflow}{else} printf(\textcolor{stringliteral}{"Select a valid option."});
+34    \textcolor{comment}{//Asking user to continue}
+35    printf(\textcolor{stringliteral}{"Continue (Y/N)? \(\backslash\)n"});                                    
+36    scanf(\textcolor{stringliteral}{" %c"}, &cont);
+37    
+38  \}\textcolor{keywordflow}{while} (cont==\textcolor{charliteral}{'Y'} || cont==\textcolor{charliteral}{'y'});
+39  
+40  
+41  \textcolor{keywordflow}{return} (0); 
+42 \}  
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:\nopagebreak
@@ -75,8 +166,63 @@ Here is the call graph for this function\+:\nopagebreak
 )}}\label{_teacher_basics_8c_a6ef0cf8d139194a7cc30e0c64e09b14e}
 
 
-Definition at line 62 of file Teacher\+Basics.\+c.
+Definition at line 90 of file Teacher\+Basics.\+c.
 
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+91 \{
+92   \textcolor{comment}{//local variable, string}
+93   \textcolor{keywordtype}{char} ch[10];                                                          
+94   printf(\textcolor{stringliteral}{"\(\backslash\)n There are five basic modifiers: signed, unsigned, short,"}
+95   \textcolor{stringliteral}{" long and const-constant. \(\backslash\)n"});
+96   \textcolor{keywordtype}{int} i;
+97   \textcolor{keywordflow}{do}
+98   \{
+99     printf(\textcolor{stringliteral}{"Which modifier do you want to learn about? \(\backslash\)n"});
+100     scanf(\textcolor{stringliteral}{" %s"}, ch);
+101     i=0;
+102     
+103     \textcolor{comment}{/*}
+104 \textcolor{comment}{    * Conditions for user's choice of subject. }
+105 \textcolor{comment}{    * Following can be interpreted as a database of req. info. on subject}
+106 \textcolor{comment}{    */}
+107     \textcolor{keywordflow}{if}(strcmp(ch,\textcolor{stringliteral}{"signed"})==0) 
+108     printf(\textcolor{stringliteral}{"All data types are “signed” by default. Signed Data Modifier"}
+109     \textcolor{stringliteral}{" implies that the data type variable can store positive values as well"}
+110     \textcolor{stringliteral}{" as negative values. \(\backslash\)nFor example: signed int temperature; \(\backslash\)n"}); 
+111     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(ch,\textcolor{stringliteral}{"unsigned"})==0) 
+112     printf(\textcolor{stringliteral}{"If we need to change the data type so that it can only store"}
+113     \textcolor{stringliteral}{" only store positive values, “unsigned” data modifier is used."}
+114     \textcolor{stringliteral}{"\(\backslash\)nFor example: unsigned int salary; \(\backslash\)n"}); 
+115     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(ch,\textcolor{stringliteral}{"short"})==0) 
+116     printf(\textcolor{stringliteral}{"A “short” type modifier does"}
+117     \textcolor{stringliteral}{" just the opposite of “long”. If one is not expecting to see high range"}
+118     \textcolor{stringliteral}{" values in a program and the values are both positive & negative."}
+119     \textcolor{stringliteral}{"\(\backslash\)nFor example: short int age; \(\backslash\)n"}); 
+120     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(ch,\textcolor{stringliteral}{"long"})==0) 
+121     printf(\textcolor{stringliteral}{"Sometimes while coding a program,"}
+122     \textcolor{stringliteral}{" we need to increase the Storage Capacity of a variable so that it can store"}
+123     \textcolor{stringliteral}{" values higher than its maximum limit which is there as default. In such"}
+124     \textcolor{stringliteral}{" situations or programs, we need to make use of the “long” data type qualifier."}
+125     \textcolor{stringliteral}{" “long” type modifier doubles the “length” of the data type when used along with it."}
+126     \textcolor{stringliteral}{"\(\backslash\)nFor example: long int turnover; \(\backslash\)n"}); 
+127     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(strcmp(ch,\textcolor{stringliteral}{"const"})==0) 
+128     printf(\textcolor{stringliteral}{"const sets the value of variable as"}
+129     \textcolor{stringliteral}{" constants. If the program tries to change the value of a constant variable,"}
+130     \textcolor{stringliteral}{" it displays an error. \(\backslash\)nFor example: const int MAX=2;"}
+131     \textcolor{stringliteral}{" (Has been declared in the beginning.) \(\backslash\)n"}); 
+132     \textcolor{keywordflow}{else} 
+133     \{ 
+134       \textcolor{comment}{//Repeating the input if an error }
+135       printf(\textcolor{stringliteral}{"Input either 'signed', 'unsigned', 'short', 'const' or 'long'. \(\backslash\)n"}); i=1;
+136     \}                   
+137   \}\textcolor{keywordflow}{while}(i==1);
+138   
+139 \}\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:\nopagebreak
@@ -87,4 +233,14 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{center}
 \end{figure}
 
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_teacher_basics_8c_af7dbda7167e22cb3417c16f78061ad80}{\index{Teacher\+Basics.\+c@{Teacher\+Basics.\+c}!M\+A\+X@{M\+A\+X}}
+\index{M\+A\+X@{M\+A\+X}!Teacher\+Basics.\+c@{Teacher\+Basics.\+c}}
+\subsubsection[{M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}const int M\+A\+X =2}}\label{_teacher_basics_8c_af7dbda7167e22cb3417c16f78061ad80}
+
+
+Definition at line 5 of file Teacher\+Basics.\+c.
 

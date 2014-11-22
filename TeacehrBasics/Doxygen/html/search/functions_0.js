@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['calcfib',['CalcFib',['../_expression_calc_8c.html#a1f044085ede204d3d2ba2e4db44e7e5d',1,'ExpressionCalc.c']]]
+  ['datatypes',['DataTypes',['../_teacher_basics_8c.html#ad0bea7ca09a6fd8663f0c0f7ac219c20',1,'TeacherBasics.c']]]
 ];
