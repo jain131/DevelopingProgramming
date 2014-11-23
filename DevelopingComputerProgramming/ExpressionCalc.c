@@ -1,9 +1,9 @@
-/*!************ CALCULATOR **************
-********** Created By Nishant Jain ***********
+/*!
+************ CALCULATOR **********************************
+********** Created By Nishant Jain ***********************
 *** Has basic Arithmetic operations and Extra Features ***
-* Extras: Fibonacci Series and Bitwise Operations *
+* Extras: Fibonacci Series and Bitwise Operations ********
 */
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,6 +17,13 @@
 void Extra();
 void CalcFib(int r);	
 void Bitwise();											
+
+/*!
+* 1 while loop
+* 2 if- else selection (NESTED)
+* 2 switch-case constructs
+* 1 for loop
+*/
 
 int main()
 {
