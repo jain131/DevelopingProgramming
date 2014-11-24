@@ -3,11 +3,13 @@
 }
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$stdlib.\+h$>$}\\*
-Include dependency graph for Expression\+Calc.\+c\+:\nopagebreak
+{\ttfamily \#include $<$math.\+h$>$}\\*
+Include dependency graph for Expression\+Calc.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=252pt]{_expression_calc_8c__incl}
+\includegraphics[width=257pt]{_expression_calc_8c__incl}
 \end{center}
 \end{figure}
 \subsection*{Functions}
@@ -17,11 +19,67 @@ void \hyperlink{_expression_calc_8c_a79cd2ba7236d8017474e3340e169f888}{Extra} ()
 \begin{DoxyCompactList}\small\item\em Function to use Extra features of the Calculator. \end{DoxyCompactList}\item 
 void \hyperlink{_expression_calc_8c_a1f044085ede204d3d2ba2e4db44e7e5d}{Calc\+Fib} (int r)
 \begin{DoxyCompactList}\small\item\em Function to print Fibonacci Series according to input of the range by the user. \end{DoxyCompactList}\item 
+void \hyperlink{_expression_calc_8c_a1069f717b1478dfc4f451a08a1690884}{Bitwise} ()
+\begin{DoxyCompactList}\small\item\em Function to use bit operations on variables (input from the user) \end{DoxyCompactList}\item 
 int \hyperlink{_expression_calc_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
+\hypertarget{_expression_calc_8c_a1069f717b1478dfc4f451a08a1690884}{\index{Expression\+Calc.\+c@{Expression\+Calc.\+c}!Bitwise@{Bitwise}}
+\index{Bitwise@{Bitwise}!Expression\+Calc.\+c@{Expression\+Calc.\+c}}
+\subsubsection[{Bitwise}]{\setlength{\rightskip}{0pt plus 5cm}void Bitwise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_expression_calc_8c_a1069f717b1478dfc4f451a08a1690884}
+
+
+Function to use bit operations on variables (input from the user) 
+
+
+
+Definition at line 175 of file Expression\+Calc.\+c.
+
+
+
+Referenced by Extra().
+
+
+\begin{DoxyCode}
+176 \{
+177   \textcolor{keywordtype}{int} A, B, C;
+178   printf(\textcolor{stringliteral}{"Type two integers to learn about bitwise operations. A= "});
+179   scanf(\textcolor{stringliteral}{" %d"}, &A);
+180   printf(\textcolor{stringliteral}{"\(\backslash\)n B= "});
+181   scanf(\textcolor{stringliteral}{" %d"}, &B);
+182   C= A & B;
+183   printf(\textcolor{stringliteral}{"AND: A & B = %d \(\backslash\)n"}, C);
+184   C= A | B;
+185   printf(\textcolor{stringliteral}{"OR: A | B = %d \(\backslash\)n"}, C);
+186   C= A ^ B;
+187   printf(\textcolor{stringliteral}{"XOR: A ^ B = %d \(\backslash\)n"}, C);
+188   C= ~A;
+189   printf(\textcolor{stringliteral}{"COMPLEMENT: ~A = %d \(\backslash\)n"}, C);
+190   C= A <<2;
+191   printf(\textcolor{stringliteral}{"LESFT SHIFT: A <<2 = %d \(\backslash\)n"}, C);
+192   C= A >>2;
+193   printf(\textcolor{stringliteral}{"RIGHT SHIFT: A >>2 = %d \(\backslash\)n"}, C);
+194 
+195 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{_expression_calc_8c_a1069f717b1478dfc4f451a08a1690884_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{_expression_calc_8c_a1f044085ede204d3d2ba2e4db44e7e5d}{\index{Expression\+Calc.\+c@{Expression\+Calc.\+c}!Calc\+Fib@{Calc\+Fib}}
 \index{Calc\+Fib@{Calc\+Fib}!Expression\+Calc.\+c@{Expression\+Calc.\+c}}
 \subsubsection[{Calc\+Fib}]{\setlength{\rightskip}{0pt plus 5cm}void Calc\+Fib (
@@ -33,36 +91,39 @@ int \hyperlink{_expression_calc_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 
 Function to print Fibonacci Series according to input of the range by the user. 
 
+Using increment operator in for loop Displaying Fibonacci series Using \char`\"{}+=\char`\"{} operator Finding Sum of Fibonacci series
+
+Definition at line 148 of file Expression\+Calc.\+c.
 
 
-Definition at line \hyperlink{_expression_calc_8c_source_l00109}{109} of file \hyperlink{_expression_calc_8c_source}{Expression\+Calc.\+c}.
 
-
-
-Referenced by \hyperlink{_expression_calc_8c_source_l00096}{Extra()}.
+Referenced by Extra().
 
 
 \begin{DoxyCode}
-00110 \{
-00111   \textcolor{keywordtype}{int} j=0, k=1, res;
-00112   printf(\textcolor{stringliteral}{"FIBONACCI SERIES: "});
-00113   
-00114   \textcolor{comment}{//printing first two values.}
-00115   printf(\textcolor{stringliteral}{"%d %d"},j,k); 
-00116 
-00117     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=2;i<r;i++)
-00118     \{
-00119       res=j+k;
-00120       j=k;
-00121       k=res; 
-00122       printf(\textcolor{stringliteral}{" %d"},k);
-00123     \}  
-00124   printf(\textcolor{stringliteral}{"\(\backslash\)n"}); 
-00125 \}
+149 \{
+150   \textcolor{keywordtype}{int} j=0, k=1, res;
+151   \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum=0;
+152   
+153   printf(\textcolor{stringliteral}{"FIBONACCI SERIES: "});
+154   \textcolor{comment}{//printing first two values.}
+155   printf(\textcolor{stringliteral}{"%d %d"},j,k); 
+156 
+163   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=2;i<r;i++)
+164   \{
+165     res=j+k;
+166     j=k;
+167     k=res; 
+168     printf(\textcolor{stringliteral}{" %d"},k); 
+169     sum+=k;
+170   \}  
+171   printf(\textcolor{stringliteral}{"\(\backslash\)nSum of Fibonacci series= %ld \(\backslash\)n"}, sum); 
+172 \}
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -82,34 +143,44 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Function to use Extra features of the Calculator. 
 
+C\+A\+L\+C\+U\+L\+A\+T\+O\+R $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ Created By Nishant Jain $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ Has basic Arithmetic operations and Extra Features $\ast$$\ast$$\ast$ Extras\+: Fibonacci Series and Bitwise Operations $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ 
 
-
-Definition at line \hyperlink{_expression_calc_8c_source_l00096}{96} of file \hyperlink{_expression_calc_8c_source}{Expression\+Calc.\+c}.
-
-
-
-References \hyperlink{_expression_calc_8c_source_l00109}{Calc\+Fib()}.
+Definition at line 125 of file Expression\+Calc.\+c.
 
 
 
-Referenced by \hyperlink{_expression_calc_8c_source_l00008}{main()}.
+References Bitwise(), and Calc\+Fib().
+
+
+
+Referenced by main().
 
 
 \begin{DoxyCode}
-00097 \{ 
-00098   \textcolor{keywordtype}{int} ch,r;
-00099   printf(\textcolor{stringliteral}{"\(\backslash\)nSelect from the following options: \(\backslash\)n1)Fibonacci Series \(\backslash\)n"});
-00100   scanf(\textcolor{stringliteral}{" %d"},&ch);
-00101   \textcolor{keywordflow}{switch}(ch)
-00102   \{
-00103     \textcolor{keywordflow}{case} 1: printf(\textcolor{stringliteral}{"Enter the range of Fibonacci series: \(\backslash\)n "}); scanf(\textcolor{stringliteral}{" %d"},&r); 
-      \hyperlink{_expression_calc_8c_a1f044085ede204d3d2ba2e4db44e7e5d}{CalcFib}(r); \textcolor{keywordflow}{break};
-00104   \}
-00105 \}
+126 \{ 
+127   \textcolor{keywordtype}{int} ch,r;
+128   \textcolor{comment}{//Variable for square root option}
+129   \textcolor{keywordtype}{float} sq;
+130   printf(\textcolor{stringliteral}{"\(\backslash\)nSelect from the following options: \(\backslash\)n1)Fibonacci Series"}
+131   \textcolor{stringliteral}{" \(\backslash\)n2)Bitwise Operations \(\backslash\)n3)Square root \(\backslash\)n"});
+132   scanf(\textcolor{stringliteral}{" %d"},&ch);
+133   \textcolor{keywordflow}{switch}(ch)
+134   \{
+135     \textcolor{keywordflow}{case} 1: printf(\textcolor{stringliteral}{"\(\backslash\)nEnter the range of Fibonacci series: \(\backslash\)n "}); 
+136             scanf(\textcolor{stringliteral}{" %d"},&r); \hyperlink{_expression_calc_8c_a1f044085ede204d3d2ba2e4db44e7e5d}{CalcFib}(r); \textcolor{keywordflow}{break};
+137             
+138     \textcolor{keywordflow}{case} 2: \hyperlink{_expression_calc_8c_a1069f717b1478dfc4f451a08a1690884}{Bitwise}(); \textcolor{keywordflow}{break};
+139     \textcolor{comment}{//Case for square root}
+140     \textcolor{keywordflow}{case} 3: printf(\textcolor{stringliteral}{"Enter the number you want the square root of: "});
+141             scanf(\textcolor{stringliteral}{" %f"},&sq);  printf(\textcolor{stringliteral}{"\(\backslash\)n Square root of %f: "},sq); 
+142             sq=sqrt(sq); printf(\textcolor{stringliteral}{"%f"},sq);  \textcolor{keywordflow}{break};
+143   \}
+144 \}
 \end{DoxyCode}
 
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -120,7 +191,8 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -136,104 +208,109 @@ Here is the caller graph for this function\+:\nopagebreak
 {}
 \end{DoxyParamCaption}
 )}}\label{_expression_calc_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+1 while loop 2 if-\/ else selection (N\+E\+S\+T\+E\+D) 2 switch-\/case constructs 1 for loop Flowchart diagram\+: 
+
+Definition at line 28 of file Expression\+Calc.\+c.
 
 
-Definition at line \hyperlink{_expression_calc_8c_source_l00008}{8} of file \hyperlink{_expression_calc_8c_source}{Expression\+Calc.\+c}.
 
-
-
-References \hyperlink{_expression_calc_8c_source_l00096}{Extra()}.
+References Extra().
 
 
 \begin{DoxyCode}
-00009 \{
-00010   \textcolor{comment}{//Welcome Screen}
-00011   printf(\textcolor{stringliteral}{"Welcome to Calculator. \(\backslash\)n"});                          
-00012   \textcolor{keywordtype}{char} check;
-00013   \textcolor{keywordtype}{int} r;
-00014   \textcolor{keywordtype}{int} ch;
-00015   \textcolor{keywordtype}{char} opt;
-00016   \textcolor{keywordtype}{float} var1, var2;
-00017   \textcolor{keywordtype}{float} res;
-00018   FILE * Log;
-00019   
-00020   \textcolor{comment}{//Opening a new file for Logging info. Opening in reading and writing mode}
-00021   Log = fopen (\textcolor{stringliteral}{"Log.txt"}, \textcolor{stringliteral}{"w+"});                            
-00022       
-00023     \textcolor{keywordflow}{do}
-00024     \{                                                           
-00025       printf(\textcolor{stringliteral}{"Please select an Arithmetic operation from the following: \(\backslash\)n"});           
-00026       printf(\textcolor{stringliteral}{"1)Addition \(\backslash\)t 2)Subtraction \(\backslash\)t 3)Multiplication \(\backslash\)t 4)Division \(\backslash\)t 5)Extra Features \(\backslash\)n "});
-00027       
-00028       \textcolor{comment}{//Input of operation, A SPACE before %d makes scanf ignore whitespace}
-00029       scanf(\textcolor{stringliteral}{" %d"}, &ch);                                            
-00030       
-00031       \textcolor{keywordflow}{if}(ch!=5)
-00032       \{
-00033         \textcolor{comment}{//Asking user if he wants to use saved previous result}
-00034         printf(\textcolor{stringliteral}{"Do you want to use the previous result as one of the operands (Y/N)? \(\backslash\)n"});
-00035         scanf(\textcolor{stringliteral}{" %c"}, &opt);                                                 
-00036       
-00037         printf(\textcolor{stringliteral}{"Enter any values for operand(s): \(\backslash\)n"});
-00038         \textcolor{keywordflow}{if}(opt==\textcolor{charliteral}{'Y'} || opt==\textcolor{charliteral}{'y'})
-00039           \{
-00040             printf(\textcolor{stringliteral}{"Operand 1 is the previous result: "});
-00041             rewind(Log);
-00042             \textcolor{comment}{//Taking value from the LOG text file for variable 1}
-00043             fscanf(Log, \textcolor{stringliteral}{" %f"}, &var1);                                  
-00044             printf(\textcolor{stringliteral}{"%f \(\backslash\)n"}, var1);
-00045           \}  
-00046       
-00047         \textcolor{keywordflow}{else} 
-00048         \{
-00049           printf(\textcolor{stringliteral}{"Operand 1: "}); 
-00050           scanf(\textcolor{stringliteral}{"%f"}, &var1);                                       
-00051         \}
-00052         
-00053         printf(\textcolor{stringliteral}{"Operand 2: "}); 
-00054         \textcolor{comment}{/* An optional starting asterisk or space indicates }
-00055 \textcolor{comment}{        *that the data is to be read from the stream but }
-00056 \textcolor{comment}{        *ignored, i.e. it is not stored in the corresponding argument.  }
-00057 \textcolor{comment}{        *Input of variable2 */}
-00058         
-00059         scanf(\textcolor{stringliteral}{" %f"}, &var2);
-00060         
-00061         \textcolor{comment}{//Switch case construct: Statements for different conditions }
-00062         \textcolor{keywordflow}{switch}(ch)                                              
-00063         \{
-00064           \textcolor{keywordflow}{case} 1: res=var1+var2; \textcolor{keywordflow}{break};
-00065           \textcolor{keywordflow}{case} 2: res=var1-var2; \textcolor{keywordflow}{break};
-00066           \textcolor{keywordflow}{case} 3: res=var1*var2; \textcolor{keywordflow}{break};
-00067           \textcolor{keywordflow}{case} 4: res=var1/var2; \textcolor{keywordflow}{break};
-00068         \}
-00069          
-00070         \textcolor{comment}{//Displaying result from file}
-00071         printf(\textcolor{stringliteral}{"\(\backslash\)nThe Result= %f \(\backslash\)n"}, res);                         
-00072       
-00073         rewind(Log);
-00074         \textcolor{comment}{//Logging the result}
-00075         fprintf(Log, \textcolor{stringliteral}{" %f"}, res);                               
-00076       
-00077       \}
-00078       
-00079       \textcolor{comment}{//Calling the CalcFib() function and passing range as parameter.}
-00080       \textcolor{keywordflow}{else} \hyperlink{_expression_calc_8c_a79cd2ba7236d8017474e3340e169f888}{Extra}();                                     
-00081       
-00082       \textcolor{comment}{//Asking user to continue or exit}
-00083       printf(\textcolor{stringliteral}{"Continue y/n?  "});                                
-00084       scanf(\textcolor{stringliteral}{" %c"},&check);                                      
-00085       
-00086     \}\textcolor{keywordflow}{while}(check!=\textcolor{charliteral}{'n'});                 
-00087    
-00088     \textcolor{comment}{// Closing opened text file}
-00089     fclose(Log);                                                    
-00090    
-00091 \textcolor{keywordflow}{return}(0);
-00092 \}
+29 \{
+30   \textcolor{comment}{//Welcome Screen}
+31   printf(\textcolor{stringliteral}{"Welcome to Calculator. \(\backslash\)n"});  
+37   \textcolor{keywordtype}{char} check=\textcolor{charliteral}{'y'};
+38   \textcolor{keywordtype}{int} r;
+39   \textcolor{keywordtype}{int} ch;
+40   \textcolor{keywordtype}{char} opt;
+41   \textcolor{keywordtype}{float} var1, var2;
+42   \textcolor{keywordtype}{float} res;
+43   FILE * Log;
+44   
+45   \textcolor{comment}{//Opening a new file for Logging info. Opening in reading and writing mode}
+46   Log = fopen (\textcolor{stringliteral}{"Log.txt"}, \textcolor{stringliteral}{"w+"});                            
+47       
+48     \textcolor{keywordflow}{while}(check!=\textcolor{charliteral}{'n'})
+49     \{                                                           
+50       printf(\textcolor{stringliteral}{"Please select an Arithmetic operation from the following: \(\backslash\)n"});           
+51       printf(\textcolor{stringliteral}{"1)Addition \(\backslash\)t 2)Subtraction \(\backslash\)t 3)Multiplication \(\backslash\)n4)Division"}
+52       \textcolor{stringliteral}{" \(\backslash\)t 5)Power \(\backslash\)t 6)Extra Features \(\backslash\)n"});
+53       
+54       \textcolor{comment}{//Input of operation, A SPACE before %d makes scanf ignore whitespace}
+55       scanf(\textcolor{stringliteral}{" %d"}, &ch);                                            
+56       
+57       \textcolor{comment}{//Condition for Extra Features option}
+58       \textcolor{keywordflow}{if}(ch!=6)
+59       \{
+60         \textcolor{comment}{//Asking user if he wants to use saved previous result}
+61         printf(\textcolor{stringliteral}{"Do you want to use the previous result as "}
+62         \textcolor{stringliteral}{"one of the operands (Y/N)? \(\backslash\)n"});
+63         scanf(\textcolor{stringliteral}{" %c"}, &opt);                                                 
+64       
+65         printf(\textcolor{stringliteral}{"Enter any values for operand(s): \(\backslash\)n"});
+66         \textcolor{keywordflow}{if}(opt==\textcolor{charliteral}{'Y'} || opt==\textcolor{charliteral}{'y'})
+67           \{
+68             printf(\textcolor{stringliteral}{"Operand 1 is the previous result: "});
+69             rewind(Log);
+70             \textcolor{comment}{//Taking value from the LOG text file for variable 1}
+71             fscanf(Log, \textcolor{stringliteral}{" %f"}, &var1);                                  
+72             printf(\textcolor{stringliteral}{"%f \(\backslash\)n"}, var1);
+73           \}  
+74       
+75         \textcolor{keywordflow}{else} 
+76         \{
+77           printf(\textcolor{stringliteral}{"Operand 1: "}); 
+78           scanf(\textcolor{stringliteral}{"%f"}, &var1);                                       
+79         \}
+80         
+81         printf(\textcolor{stringliteral}{"Operand 2: "}); 
+82         \textcolor{comment}{/* An optional starting asterisk or space indicates }
+83 \textcolor{comment}{        *that the data is to be read from the stream but }
+84 \textcolor{comment}{        *ignored, i.e. it is not stored in the corresponding argument.  }
+85 \textcolor{comment}{        *Input of variable2 */}
+86         
+87         scanf(\textcolor{stringliteral}{" %f"}, &var2);
+88         
+89         \textcolor{comment}{//Switch case construct: Statements for different conditions }
+90         \textcolor{keywordflow}{switch}(ch)                                              
+91         \{
+92           \textcolor{keywordflow}{case} 1: res=var1+var2; \textcolor{keywordflow}{break};
+93           \textcolor{keywordflow}{case} 2: res=var1-var2; \textcolor{keywordflow}{break};
+94           \textcolor{keywordflow}{case} 3: res=var1*var2; \textcolor{keywordflow}{break};
+95           \textcolor{keywordflow}{case} 4: res=var1/var2; \textcolor{keywordflow}{break};
+96           \textcolor{keywordflow}{case} 5: res=pow(var1,var2); \textcolor{keywordflow}{break};
+97         \}
+98          
+99         \textcolor{comment}{//Displaying result from file}
+100         printf(\textcolor{stringliteral}{"\(\backslash\)nThe Result= %f \(\backslash\)n"}, res);                         
+101       
+102         rewind(Log);
+103         \textcolor{comment}{//Logging the result}
+104         fprintf(Log, \textcolor{stringliteral}{" %f"}, res);                               
+105       
+106       \}
+107       
+108       \textcolor{comment}{//Calling the CalcFib() function and passing range as parameter.}
+109       \textcolor{keywordflow}{else} \hyperlink{_expression_calc_8c_a79cd2ba7236d8017474e3340e169f888}{Extra}();                                     
+110       
+111       \textcolor{comment}{//Asking user to continue or exit}
+112       printf(\textcolor{stringliteral}{"\(\backslash\)nContinue y/n?  "});                              
+113       scanf(\textcolor{stringliteral}{" %c"},&check);                                      
+114       
+115     \}                   
+116    
+117     \textcolor{comment}{// Closing opened text file}
+118     fclose(Log);                                                    
+119    
+120 \textcolor{keywordflow}{return}(0);
+121 \}
 \end{DoxyCode}
 
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
