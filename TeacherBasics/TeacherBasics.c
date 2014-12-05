@@ -11,6 +11,22 @@ void Modifiers();
 
 int main()
 {
+<<<<<<< HEAD
+ 
+ /*
+ *1 Nested loop
+ * 2 do-while loops
+ * Starting program
+ */
+ for(int i=1; i<=20; i++)
+ {
+   for(int j=0; j<=i; j--)
+   printf("*");
+   printf("\n");
+ }
+ 
+=======
+>>>>>>> master
  int ch;
  char cont;
  

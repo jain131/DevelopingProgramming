@@ -100,8 +100,13 @@
     display: none;
     position: absolute;
     left: 0; top: 0;
+<<<<<<< HEAD
+    border: 1px solid #79B262;
+    background-color: #F7FAF6;
+=======
     border: 1px solid #AABFA0;
     background-color: #FAFBFA;
+>>>>>>> master
     z-index: 1;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -145,7 +150,11 @@ a.SelectItem:active {
 
 a.SelectItem:hover {
     color: #FFFFFF;
+<<<<<<< HEAD
+    background-color: #2F4A24;
+=======
     background-color: #5E7851;
+>>>>>>> master
     outline-style: none;
     text-decoration: none;
     cursor: pointer;
@@ -164,7 +173,11 @@ iframe#MSearchResults {
     position: absolute;
     left: 0; top: 0;
     border: 1px solid #000;
+<<<<<<< HEAD
+    background-color: #E8F2E4;
+=======
     background-color: #F2F5F0;
+>>>>>>> master
 }
 
 /* ----------------------------------- */
@@ -199,7 +212,11 @@ body.SRPage {
 
 .SRSymbol {
     font-weight: bold; 
+<<<<<<< HEAD
+    color: #355429;
+=======
     color: #658257;
+>>>>>>> master
     font-family: Arial, Verdana, sans-serif;
     text-decoration: none;
     outline: none;
@@ -207,7 +224,11 @@ body.SRPage {
 
 a.SRScope {
     display: block;
+<<<<<<< HEAD
+    color: #355429; 
+=======
     color: #658257; 
+>>>>>>> master
     font-family: Arial, Verdana, sans-serif;
     text-decoration: none;
     outline: none;
@@ -240,7 +261,11 @@ DIV.searchresults {
 /*---------------- External search page results */
 
 .searchresult {
+<<<<<<< HEAD
+    background-color: #EBF3E8;
+=======
     background-color: #F3F6F2;
+>>>>>>> master
 }
 
 .pages b {
