@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*!
 ************ CALCULATOR **********************************
 ********** Created By Nishant Jain ***********************
@@ -13,6 +14,8 @@
 *Used functions sqrt() and pow()
 */
 =======
+=======
+>>>>>>> elements
 /*!*********************************************************************
 *
 * Original Author: Nishant Jain
@@ -24,11 +27,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> elements
 #include <math.h>
 
 //Function prototype 
 void Extra();
+<<<<<<< HEAD
 <<<<<<< HEAD
 void CalcFib(int r);	
 void Bitwise();											
@@ -44,6 +51,18 @@ void Bitwise();
 * 1 for loop
 */
 
+=======
+void CalcFib(int r);
+void Bitwise();
+
+/*!
+* 1 while loop
+* 2 if- else selection (NESTED)
+* 2 switch-case constructs
+* 1 for loop
+*/
+
+>>>>>>> elements
 /*!**********************************************************************
 * Module Name: main
 *
@@ -85,14 +104,19 @@ int main()
 {
   //Welcome Screen
 <<<<<<< HEAD
+<<<<<<< HEAD
   printf("Welcome to Calculator. \n");	
 =======
   printf("Welcome to Calculator. \n");
 >>>>>>> master
+=======
+  printf("Welcome to Calculator. \n");
+>>>>>>> elements
   /*! 
   * Flowchart diagram: 
   * \image html FlowchartCalc.jpeg
   */
+<<<<<<< HEAD
 <<<<<<< HEAD
 						
   char check='y';
@@ -101,6 +125,10 @@ int main()
 
   char check='y';
 >>>>>>> master
+=======
+
+  char check='y';
+>>>>>>> elements
   int ch;
   char opt;
   float var1, var2;
@@ -108,6 +136,7 @@ int main()
   FILE * Log;
 
   //Opening a new file for Logging info. Opening in reading and writing mode
+<<<<<<< HEAD
 <<<<<<< HEAD
   Log = fopen ("Log.txt", "w+");							
       
@@ -119,6 +148,9 @@ int main()
 =======
   Log = fopen ("Log.txt", "w+");
 >>>>>>> master
+=======
+  Log = fopen ("Log.txt", "w+");
+>>>>>>> elements
       
   while(check!='n')
   { 
@@ -138,6 +170,7 @@ int main()
       scanf(" %c", &opt);
       printf("Enter any values for operand(s): \n");
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       //Condition for Extra Features option
       if(ch!=6)
@@ -189,6 +222,11 @@ int main()
       {
         printf("Operand 1 is the previous result: ");
 >>>>>>> master
+=======
+      if(opt=='Y' || opt=='y')
+      {
+        printf("Operand 1 is the previous result: ");
+>>>>>>> elements
         rewind(Log);
         //Taking value from the LOG text file for variable 1
         fscanf(Log, " %f", &var1);
@@ -201,6 +239,7 @@ int main()
         scanf("%f", &var1);
       }
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       //Calling the CalcFib() function and passing range as parameter.
       else Extra(); 									 
@@ -224,6 +263,17 @@ int main()
       */
       scanf(" %f", &var2);
       
+=======
+      printf("Operand 2: "); 
+      /*! 
+      * An optional starting asterisk or space indicates 
+      * that the data is to be read from the stream but 
+      * ignored, i.e. it is not stored in the corresponding argument.
+      * Input of variable2 
+      */
+      scanf(" %f", &var2);
+      
+>>>>>>> elements
       //Switch case construct: Statements for different conditions 
       switch(ch) 
       {
@@ -255,7 +305,10 @@ int main()
   // Closing opened text file
   fclose(Log);
   
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> elements
 return(0);
 }
 
@@ -293,18 +346,24 @@ void Extra()
 { 
   int ch,r;
 <<<<<<< HEAD
+<<<<<<< HEAD
   //Variable for square root option
   float sq;
 =======
   float sq;
 
 >>>>>>> master
+=======
+  float sq;
+
+>>>>>>> elements
   printf("\nSelect from the following options: \n1)Fibonacci Series"
   " \n2)Bitwise Operations \n3)Square root \n");
   scanf(" %d",&ch);
   
   switch(ch)
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     case 1: printf("\nEnter the range of Fibonacci series: \n "); 
     		scanf(" %d",&r); CalcFib(r); break;
@@ -315,6 +374,8 @@ void Extra()
     		scanf(" %f",&sq);  printf("\n Square root of %f: ",sq); 
     		sq=sqrt(sq); printf("%f",sq);  break;
 =======
+=======
+>>>>>>> elements
     case 1:
     printf("\nEnter the range of Fibonacci series: \n "); 
     scanf(" %d",&r);
@@ -329,11 +390,15 @@ void Extra()
     printf("\n Square root of %f: ",sq); 
     sq=sqrt(sq);
     printf("%f",sq);  break;
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> elements
   }
 }
  
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 //! Function to print Fibonacci Series according to input of the range by the user
 void CalcFib(int r)											
@@ -373,6 +438,40 @@ void CalcFib(int r)
 {
   int j=0, i=2, k=1, res;
 >>>>>>> master
+=======
+/*!**********************************************************************
+* Module Name: CalcFib
+*
+* Original Author: Nishant Jain
+*
+* Module Creation Date: November 27, 2014
+*
+* Description:This function finds sum of Fibonacci Series
+*
+* Required Files/Databases:
+* None
+*
+* Non System Routines Called:
+* None
+*
+* Return Value: 
+* None
+*
+* OS Specific Assumptions:
+* None
+*
+* Local Variables:
+* j integer used for calculating sum
+* i integer used in for loop
+* k integer used to calulate sum
+* res integer used to calulate sum
+* sum long integer to store sum of fibonacci series
+*
+***********************************************************************/ 
+void CalcFib(int r)
+{
+  int j=0, i=2, k=1, res;
+>>>>>>> elements
   long int sum=0;
   
   printf("FIBONACCI SERIES: ");
@@ -380,21 +479,30 @@ void CalcFib(int r)
   printf("%d %d",j,k); 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   /*!Using increment operator in for loop
 =======
   /*
   * Using increment operator in for loop
 >>>>>>> master
+=======
+  /*
+  * Using increment operator in for loop
+>>>>>>> elements
   * Displaying Fibonacci series
   * Using "+=" operator
   * Finding Sum of Fibonacci series
   */
   
 <<<<<<< HEAD
+<<<<<<< HEAD
   for(int i=2;i<r;i++)
 =======
   for(i=2;i<r;i++)
 >>>>>>> master
+=======
+  for(i=2;i<r;i++)
+>>>>>>> elements
   {
     res=j+k;
     j=k;
@@ -406,11 +514,14 @@ void CalcFib(int r)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //!Function to use bit operations on variables (input from the user)
 void Bitwise()
 {
   int A, B, C;
 =======
+=======
+>>>>>>> elements
 /*!**********************************************************************
 * Module Name: Bitwise
 *
@@ -442,7 +553,10 @@ void Bitwise()
 {
   int A, B, C;
 
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> elements
   printf("Type two integers to learn about bitwise operations. A= ");
   scanf(" %d", &A);
   printf("\n B= ");
