@@ -246,7 +246,7 @@ void Extra()
 void CalcFib(int r)
 {
   int j=0, i=2, k=1, res;
-  long int sum=0;
+  long int sum=1;
   
   printf("FIBONACCI SERIES: ");
   //printing first two values.
