@@ -1,12 +1,16 @@
 /*!*********************************************************************
+* 
+* \brief Calculator 
 *
-* Original Author: Nishant Jain
-* File Creation Date: 25 November 2014
-* Description: A Calulator program with basic Arithmetic Operations
-* and some extra features such as sum of Fibonacci series, 
+* \author Nishant Jain
+*
+* \date 25 November 2014
+*
+* \details A Calulator program with basic Arithmetic Operations
+* and some extra features such as sum of Fibonacci series,
 * bitwise operations and square-root function
+*
 **********************************************************************/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -16,21 +20,16 @@ void Extra();
 void CalcFib(int r);
 void Bitwise();
 
-/*!
-* 1 while loop
-* 2 if- else selection (NESTED)
-* 2 switch-case constructs
-* 1 for loop
-*/
 
 /*!**********************************************************************
-* Module Name: main
 *
-* Original Author: Nishant
+* \brief main
 *
-* Module Creation Date: November 25, 2014
+* \author Nishant
 *
-* Description: Calls arithmetic functions and uses file to log outputs
+* \date November 25, 2014
+*
+* \details Calls arithmetic functions and uses file to log outputs
 *
 * Required Files/Databases:
 * Log.txt
@@ -60,6 +59,14 @@ void Bitwise();
 * Celsius to Fahrenheit.
 * 
 ***********************************************************************/
+
+/*!
+* 1 while loop
+* 2 if- else selection (NESTED)
+* 2 switch-case constructs
+* 1 for loop
+*/
+
 int main()
 {
   //Welcome Screen
@@ -156,15 +163,14 @@ return(0);
 }
 
 
-//! Function to use Extra features of the Calculator
 /*!**********************************************************************
-* Module Name: Extra
+* \brief Extra
 *
-* Original Author: Nishant Jain
+* \author Nishant Jain
 *
-* Module Creation Date: November 27, 2014
+* \date November 27, 2014
 *
-* Description: This function calculates square root. 
+* \details This function calculates square root. 
 * Calls CalcFib() and Bitwise()
 *
 * Required Files/Databases:
@@ -215,13 +221,14 @@ void Extra()
  
 
 /*!**********************************************************************
-* Module Name: CalcFib
 *
-* Original Author: Nishant Jain
+* \brief CalcFib
 *
-* Module Creation Date: November 27, 2014
+* \author Nishant Jain
 *
-* Description:This function finds sum of Fibonacci Series
+* \date November 27, 2014
+*
+* \detailsThis function finds sum of Fibonacci Series
 *
 * Required Files/Databases:
 * None
@@ -264,20 +271,21 @@ void CalcFib(int r)
     res=j+k;
     j=k;
     k=res; 
-    printf(" %d",k); 
+    printf(" %d",k);
     sum+=k;
   }  
   printf("\nSum of Fibonacci series= %ld \n", sum); 
 }
 
 /*!**********************************************************************
-* Module Name: Bitwise
 *
-* Original Author: Nishant Jain
+* \brief Bitwise
 *
-* Module Creation Date: November 27, 2014
+* \author Nishant Jain
 *
-* Description: This function uses and displays bit operations on variables
+* \date November 27, 2014
+*
+* \details This function uses and displays bit operations on variables
 *
 * Required Files/Databases:
 * None

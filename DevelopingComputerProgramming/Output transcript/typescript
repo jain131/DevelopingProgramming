@@ -76,7 +76,7 @@ Select from the following options:
 Enter the range of Fibonacci series: 
  6
 FIBONACCI SERIES: 0 1 1 2 3 5
-Sum of Fibonacci series= 11 
+Sum of Fibonacci series= 12 
 
 Continue y/n?  n
 bash-3.2$ exit

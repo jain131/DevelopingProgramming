@@ -1,4 +1,4 @@
 Developing-Computer-Programming-Program-Elements-Structure
 ==========================================================
 
-Developing Computer Programming: Program Elements &amp; Structure, challenges, programs and documentation
+This is the “Calculator” program with basic arithmetic operations and some extra features such as sum of Fibonacci series, bitwise operations and square-root function.
